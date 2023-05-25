@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useState} from 'react'
+import CardForm from './components/CardForm';
+import CardInfo from './components/CardInfo';
 function App() {
+
+  
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="sub-container">
+          <div className="icon-container">
+            <img src="./images/cancel.svg" alt="close button" />
+          </div>
+          <div className="main-content">
+          
+            <CardForm/>
+            <CardInfo/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

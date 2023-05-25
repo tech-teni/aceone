@@ -1,13 +1,636 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* variable  */
+:root {
+  --primary: #1c2852;
+  --input-height: 60px;
+  --input-font-size: 18px;
+  --input-border-color: #ebeced;
+  --input-border-radius: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* body */
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+/* container */
+.container {
+  background-color: blue;
+  width: 97%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sub conatiner */
+
+.sub-container {
+  width: 80%;
+  height: 85%;
+  background-color: white;
+}
+
+/*icon container */
+.icon-container {
+  margin-top: 15px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-container img {
+  width: 12px;
+  height: 12px;
+}
+
+/* main-content */
+.main-content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 2% 2%;
+  gap: 10px;
+}
+
+
+
+/*************************** card-info 1 ********************/
+.card-info {
+  width: 100%;
+  padding: 0px 10px;
+}
+/* card-info header*/
+.card-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-container .logo {
+  width: 45px;
+  height: 45px;
+}
+.logo-container h1 {
+  font-size: 22px;
+  font-family: sans-serif;
+  color: var(--primary);
+}
+
+.logo-container h1 #thin-name {
+  font-weight: 100;
+}
+
+.time span {
+  background-color: var(--primary);
+  color: white;
+  padding: 7px 10px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+/* card-info body*/
+
+.card-info-body {
+  margin-top: 40px;
+}
+.card-info-body h4 {
+  margin: 0px;
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.edit-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-container p {
+  margin: 0px;
+  font-size: 12px;
+  color: #a7a9b7;
+}
+.more-info {
+  font-size: 12px;
+  color: #a7a9b7 !important;
+}
+
+.edit-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-icon p {
+  color: #0660fe;
+
+  font-size: 14px;
+}
+
+/* form */
+form {
+  margin-top: 20px;
+}
+
+form .credit-card-inputs {
+  width: 100%;
+  border: 1px solid #ebeced;
+  height: var(--input-height);
+  display: flex;
+  align-items: center;
+  border-radius: var(--input-border-radius);
+
+}
+
+form .credit-card-inputs:focus-within{
+  border: 2px solid #0660fe;
+  color: #0660fe;
+
+}
+
+form .credit-card-inputs input {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  width: 80%;
+  color: #c6cadb;
+  border-radius: 3px;
+}
+form .credit-card-inputs input:focus {
+  color: #0660fe;
+
+}
+.credit-card-master-card-logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.credit-card-master-card-logo img {
+  width: 25px;
+  height: 25px;
+}
+.credit-card-marked-logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.credit-card-marked-logo img {
+  width: 25px;
+  height: 25px;
+}
+
+/* credit card CV */
+.credit-card-cv {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+.credit-card-cv-info {
+  width: 50%;
+}
+.credit-card-cv-input {
+  width: 50%;
+  border: 1px solid #ebeced;
+  height: var(--input-height);
+  display: flex;
+  align-items: center;
+  /* padding-left: 10%; */
+  border-radius: var(--input-border-radius);
+}
+
+.credit-card-cv-input:focus-within {
+    border: 2px solid #0660fe;
+  color: #0660fe;
+
+
+}
+.credit-card-cv-input input {
+  border: none;
+  outline: none;
+text-align: center;
+  width: 70%;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: var(--input-font-size);
+}
+.credit-card-cv-input input:focus{
+  color: #0660fe;
+
+
+}
+.credit-card-cv-input .keypad {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+/* expiry date  */
+.expiry-date {
+  width: 1005;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.expiry-date-info{
+  width: 50%;
+}
+
+
+.expiry-date-input{
+  display: flex;
+  width: 50%;
+color: var(--primary);
+  align-items: center;
+
+}
+
+
+.expiry-date-input input{
+width: 48%;
+font-size: var(--input-font-size);
+height: var(--input-height);
+border: 1px solid var(--input-border-color);
+outline: none;
+text-align: center;
+color: var(--primary);
+font-weight: bold;
+border-radius: var(--input-border-radius);
+}
+
+.expiry-date-input input:focus {
+  border: 2px solid #0660fe;
+color: #0660fe;
+
+
+}
+.expiry-date-input span{
+  width: 8%;
+  padding: 0px 10px;
+  font-weight: bold;
+
+  font-size: var(--input-font-size);
+}
+
+
+/* password info */
+
+.password {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+.password-info {
+  width: 50%;
+}
+.password-input {
+  width: 50%;
+  border: 1px solid #ebeced;
+  height: var(--input-height);
+  display: flex;
+  align-items: center;
+  /* padding-left: 10%; */
+  border-radius: var(--input-border-radius);
+}
+.password-input:focus-within{
+  border: 2px solid #0660fe;
+color: #0660fe;
+
+}
+
+
+.password-input input {
+  border: none;
+  outline: none;
+  letter-spacing: 3px;
+text-align: center;
+  width: 70%;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: var(--input-font-size);
+}
+.password-input input:focus {
+  color: #0660fe;
+
+}
+
+
+.password-input .keypad {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* submit button */
+
+.submit-container{
+  width: 100%;
+}
+.submit-container input[type='submit']{
+  width: 100%;
+border: none;
+  height: 50px;
+  background-color: #045DFF;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+
+  margin-top: 25px;
+
+  margin-bottom: 20px;
+}
+
+
+
+/*************************** card-info 2 ********************/
+
+
+.circle{
+  width: 50px;
+  margin: auto;
+  height: 30px ;
+  background-color: #045DFF;
+border-radius: 0% 0% 50% 50%;
+ 
+}
+/* ATM */
+.ATM-card{
+  z-index: 20;
+  padding: 0px 20px;
+  width: 40%;
+  margin: auto;
+
+
+background: rgba( 255, 255, 255, 0.45 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+  
+  
+  margin-top: -25px;
+
+}
+
+/* atm head */
+.ATM-head{
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ATM-head img{
+  width: 40px;
+  height: 40px;
+}
+
+.ATM-head svg{
+color: var(--primary);
+font-size: 30px;
+font-family: sans-serif;
+}
+
+/* ATM-body */
+
+.ATM-body {
+  margin-top: 60px;
+margin-bottom: 20px;
+}
+
+.ATM-body h5{
+  color: var(--primary);
+
+}
+
+
+.ATM-body .codes{
+  font-size: var(--input-font-size);
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+align-items: center;
+gap: 10px;
+}
+
+
+.ATM-body .codes svg {
+  font-size: 12px
+
+}
+
+
+
+/* ATM Footer */
+.ATM-footer{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .expiry-date-info p{
+color: var(--primary);
+font-weight: 700;
+  }
+
+  .card-type img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-type p{
+  margin: 0px ;
+    font-size: 8px;
+    font-weight: bold;
+margin-top: -10px;
+      }
+
+
+      /* invoices */
+
+ .invoices{
+  border-radius: 10px;
+   width: 80%;
+   min-height: 100px;
+margin: auto;
+background-color: #E8ECEF;
+margin-top: -170px;
+
+ }
+
+ .invoices-top{
+padding-top: 25vh;
+ }
+
+ .invoices-body{
+width: 70%;
+  margin: auto;
+  padding-bottom: 15px;
+ }
+
+ .invoices-body ul{
+  padding: 0px ;
+margin: 0px; }
+ .invoices-body li{
+  height: 20px;
+  margin-bottom: 10px;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ .invoices-body li h4{
+  font-size: 15px;
+  font-weight: lighter;
+  color: #7f8b99;
+ }
+
+
+ .invoices-body li p{
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--primary);
+
+  display: flex;
+  gap: 10px;
+align-items: center; }
+
+.invoices-body li p .company-icon{
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background-color: var(--primary);
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.invoices-body li p .company-icon svg{
+color: white;
+font-size: 10px;
+}
+
+ /* design */
+ .design{
+  margin-bottom: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ .design .white-circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: -10px;
+}
+
+.design .white-circle2{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: -10px;
+}
+
+ /* invoice footer */
+
+
+ .invoices-footer{
+  border-top: 2px dashed #D5D9E2;
+ }
+.sub-invoices-footer{
+  width: 70%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+}
+
+.sub-invoices-footer h5{
+  font-size: 14px; 
+  color: #7f8b99;
+  font-weight: lighter;
+  margin: 0px;
+}
+.sub-invoices-footer h5 b{
+  font-size: 30px; 
+  color: var(--primary);
+  font-weight: bold;
+  margin: 0px;
+}
+.sub-invoices-footer h5 span{
+  font-size: 16px; 
+  font-weight: 500;
+  margin: 0px;
+}
+.sub-invoices-footer h5 .kobo{
+  font-size: 16px; 
+  color: var(--primary);
+  font-weight: 500;
+  margin: 0px;
+  margin-right: 6px;
+}
+.total-price{
+  display: flex;
+  justify-content: space-between;
+}
+.total-price img {
+  display: flex;
+  width: 35px;
+  height: 45px;
+}
+
+
+@media screen and (max-width: 789px){
+  .main-content{
+    grid-template-columns: 100%;
+
+  } 
+
+  .sub-container{
+    padding: 20px;
+  }
+
+
+  .card-info-header{
+    flex-direction: column;
+gap: 20px;  }
+
+
+.card-info-body h4{
+  font-size: 15px;
+}
+
+.more-info{
+  font-size: 10px;
+}
 }
