@@ -40,8 +40,8 @@ const CardForm = () => {
           </div>
         </div>
         <form>
-          <div class="credit-card-inputs">
-            <div class="credit-card-master-card-logo">
+          <div className="credit-card-inputs">
+            <div className="credit-card-master-card-logo">
               <img src="./images/mastercard.png" alt="master card" />
             </div>
             <input
@@ -51,13 +51,13 @@ const CardForm = () => {
               value={cardValue}
             />
 
-            <div class="credit-card-marked-logo">
+            <div className="credit-card-marked-logo">
               <img src="./images/verified.png" alt="master card" />
             </div>
           </div>
 
-          <div class="credit-card-cv">
-            <div class="credit-card-cv-info">
+          <div className="credit-card-cv">
+            <div className="credit-card-cv-info">
               <h4>CVV Number</h4>
               <p className="more-info">Enter the 3 or 4 digit number on card</p>
             </div>
@@ -70,8 +70,8 @@ const CardForm = () => {
               </div>
             </div>
           </div>
-          <div class="expiry-date">
-            <div class="expiry-date-info">
+          <div className="expiry-date">
+            <div className="expiry-date-info">
               <h4>Expiry Date</h4>
               <p className="more-info">Enter expiration date of the card</p>
             </div>
@@ -81,7 +81,7 @@ const CardForm = () => {
               <input type="number" value={expiryDateYear} />
             </div>
           </div>
-          <div class="password">
+          <div className="password">
             <div class="password-info">
               <h4>Password</h4>
               <p className="more-info">
