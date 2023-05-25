@@ -47,7 +47,7 @@ const CardForm = () => {
             <input
               type="text"
               id="inputField"
-              maxlength="25"
+              maxLength="25"
               value={cardValue}
             />
 
@@ -82,7 +82,7 @@ const CardForm = () => {
             </div>
           </div>
           <div className="password">
-            <div class="password-info">
+            <div className="password-info">
               <h4>Password</h4>
               <p className="more-info">
                 Enter your Dynamic password Mac-Book Air-1
