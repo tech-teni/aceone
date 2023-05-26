@@ -30,7 +30,7 @@ body {
 /* sub conatiner */
 
 .sub-container {
-  width: 80%;
+  width: 70%;
   height: 85%;
   background-color: white;
 }
@@ -523,8 +523,8 @@ margin: 0px; }
 align-items: center; }
 
 .invoices-body li p .company-icon{
-width: 18px;
-height: 18px;
+width: 20px;
+height: 20px;
 border-radius: 50%;
 background-color: var(--primary);
 display: flex;
@@ -610,6 +610,16 @@ font-size: 10px;
 }
 
 
+
+/* media query */
+
+
+@media screen and (min-width: 1500px){
+  .sub-container{
+    width: 60%;
+  }
+}
+
 @media screen and (max-width: 789px){
   .main-content{
     grid-template-columns: 100%;
@@ -632,5 +642,23 @@ gap: 20px;  }
 
 .more-info{
   font-size: 10px;
+  font-weight: normal !important;
+}
+}
+
+
+
+
+@media screen and (max-width: 500px){
+  .container{
+background-color: white;  }
+
+
+.invoices-body{
+  padding-top: 20px;
+}
+
+input{
+  font-size: 15px !important;
 }
 }
